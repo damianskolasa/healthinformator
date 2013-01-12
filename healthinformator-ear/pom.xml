@@ -4,7 +4,7 @@
 
    <parent>
       <artifactId>healthinformator</artifactId>
-      <groupId>kolasa.wojcik</groupId>
+      <groupId>pl</groupId>
       <version>0.0.1-SNAPSHOT</version>
    </parent>
 
@@ -17,12 +17,12 @@
 
       <!-- Depend on the ejb module and war so that we can package them -->
       <dependency>
-         <groupId>kolasa.wojcik</groupId>
+         <groupId>pl</groupId>
          <artifactId>healthinformator-web</artifactId>
          <type>war</type>
       </dependency>
       <dependency>
-         <groupId>kolasa.wojcik</groupId>
+         <groupId>pl</groupId>
          <artifactId>healthinformator-ejb</artifactId>
          <type>ejb</type>
       </dependency>
@@ -46,7 +46,7 @@
                   <!-- Register our War as a web module, and set the context 
                      root -->
                   <webModule>
-                     <groupId>kolasa.wojcik</groupId>
+                     <groupId>pl</groupId>
                      <artifactId>healthinformator-web</artifactId>
                      <!-- Define the context root for the webapp -->
                      <contextRoot>/healthinformator</contextRoot>

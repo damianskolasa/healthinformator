@@ -1,4 +1,4 @@
-package kolasa.wojcik.healthinformator.model;
+package pl.healthinformator.model;
 
 import java.io.Serializable;
 import java.util.Date;

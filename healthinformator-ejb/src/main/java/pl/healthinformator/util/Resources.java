@@ -1,4 +1,4 @@
-package kolasa.wojcik.healthinformator.util;
+package pl.healthinformator.util;
 
 import java.util.logging.Logger;
 

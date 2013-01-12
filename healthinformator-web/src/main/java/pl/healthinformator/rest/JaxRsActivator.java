@@ -1,4 +1,4 @@
-package kolasa.wojcik.healthinformator.rest;
+package pl.healthinformator.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
