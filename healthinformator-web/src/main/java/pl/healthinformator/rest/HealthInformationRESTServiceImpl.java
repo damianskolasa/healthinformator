@@ -4,9 +4,9 @@ import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
 
 import pl.healthinformator.model.HealthCareData;
+import pl.healthinformator.service.HealthCareService;
 
 /**
  * JAX-RS Example
@@ -20,29 +20,20 @@ public class HealthInformationRESTServiceImpl implements
 		HealthInformationRESTService {
 
 	@Inject
-	private EntityManager em;
+	private HealthCareService healthCareService;
 
 	public HealthCareData lookupById(long id) {
-		return em.find(HealthCareData.class, id);
+		return healthCareService.lookupById(id);
 	}
 
 	public List<HealthCareData> lookupByInfo(String firstName, String lastName,
 			String pesel) {
-
-		List<HealthCareData> healthCareDatas = em
-				.createQuery(
-						"select hcd from HealthCareData hcd where hcd.firstName = :firstName and hcd.lastName = :lastName and hcd.pesel = :pesel",
-						HealthCareData.class)
-				.setParameter("firstName", firstName)
-				.setParameter("lastName", lastName)
-				.setParameter("pesel", pesel).getResultList();
-
-		return healthCareDatas;
+			return healthCareService.clientHealthCareInformations(firstName, lastName, pesel);
 	}
 
-	public Long update(HealthCareData healthCareData) {
-		healthCareData = em.merge(healthCareData);
-		return healthCareData.getId();
+	public HealthCareData update(HealthCareData healthCareData) {
+		healthCareData = healthCareService.save(healthCareData);
+		return healthCareData;
 	}
 
 }

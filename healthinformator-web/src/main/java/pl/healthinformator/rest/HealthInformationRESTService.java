@@ -30,9 +30,9 @@ public interface HealthInformationRESTService {
 	
 	
 	@PUT
-	@Path("/health/new")
+	@Path("/healthCareData.xml")
 	@Consumes("text/xml")
 	@Produces("text/xml")
-	public Long update(HealthCareData healthCareData);
+	public HealthCareData update(HealthCareData healthCareData);
 
 }
