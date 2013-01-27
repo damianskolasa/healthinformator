@@ -10,12 +10,12 @@
    <datasource jndi-name="java:jboss/datasources/healthinformatorDS"
       pool-name="healthinformator" enabled="true"
       use-java-context="true">
-      <connection-url>jdbc:mysql://localhost:3306/healthinformator</connection-url>
-      <driver>mysql-connector-java-5.1.22.jar</driver>
-      <security>
-         <user-name>liferay</user-name>
-         <password>liferay</password>
-      </security>
+      <connection-url>${jdbc.url}</connection-url>
+		<driver>${jdbc.driver}</driver>
+		<security>
+			<user-name>${jdbc.username}</user-name>
+			<password>${jdbc.password}</password>
+		</security>
    </datasource>
 </datasources>
  

@@ -6,12 +6,14 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Entity
+@Table(name="SOA_HEALTH_CARE_DATA")
 public class HealthCareData implements Serializable {
 
 	private static final long serialVersionUID = -4250543534557893576L;
